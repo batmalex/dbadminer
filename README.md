@@ -1,2 +1,2 @@
 # dbadminer
-Custom docker image for adminning mono and mssql db
+Custom docker image for adminning mongo and mssql databases
