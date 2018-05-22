@@ -1,4 +1,4 @@
-FROM dockette/alpine:3.5
+ROM dockette/alpine:3.5
 
 ENV ADMINER_VERSION=4.5.0
 ENV MEMORY=256M
@@ -9,6 +9,7 @@ RUN apk update && apk upgrade && \
         wget \
         ca-certificates \
         php5 && \
+    apk add --update  php5-mssql && \
         wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://github.com/sgerrand/alpine-pkg-php5-mongo/releases/download/1.6.14-r0/sgerrand.rsa.pub && \
         wget https://github.com/sgerrand/alpine-pkg-php5-mongo/releases/download/1.6.14-r0/php5-mongo-1.6.14-r0.apk && \
         apk add php5-mongo-1.6.14-r0.apk && \
